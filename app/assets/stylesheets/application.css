@@ -24,6 +24,6 @@ body{
 	background-color: rgba(253,254,170,0.7);
 }
 
-h2{
-	font-size: 43px;
+#post-title{
+	font-size: 36px;
 }
