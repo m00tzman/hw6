@@ -27,3 +27,10 @@ body{
 #post-title{
 	font-size: 36px;
 }
+
+#content{
+	background-color: rgba(253,254,170,0.7);
+	margin: auto;
+	width: 50%;
+	min-height: 100%;
+}

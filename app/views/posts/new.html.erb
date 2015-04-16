@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+	<h1>Add a new student</h1>
+
+	<%= form_for @post do |f| %>
+	<%= f.label :title %>
+	<%= f.text_field :title %> <br>
+
+	<%= f.label :author %>
+	<%= f.text_field :author %> <br>
+
+	<%= f.label :content %>
+	<%= f.text_field :content %> <br>
+
+	<%= f.submit %><br>
+
+	<%= link_to "Back to blog!", posts_path %>
+
+	<% end %>
+
+	</body>
+</html>

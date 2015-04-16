@@ -4,11 +4,15 @@
 	</head>
 	<body>
 	<h1>Woah look at me i made a blog</h1>
+	<%= link_to "Add a new post", new_post_path %>
 	<h2>My latest posts:</h2>
 		<% @posts.each do |post| %>
 		<div class="blog-posts">
 			<h2 id="post-title"><%= link_to post.title, post_path(post) %></h2>
 			<h3>By: <%= post.author %></h3>
+			<span>
+				<%= link_to "Delete", post_path(post), method: :delete, data: {confirm: "Are you sure you want to delete this student?"} %>
+			</span>
 		</div>
 		<% end %>
 	</body>
