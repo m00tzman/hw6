@@ -29,5 +29,20 @@ class PostsController < ApplicationController
 		end
 		redirect_to posts_path
 	end
+
+	def edit
+		@post = Post.find_by_id(params[:id])
+	end
+
+	def update
+		@post = Post.find_by_id(params[:id])
+
+		if @post.update_attributes(params[:post])
+			redirect_to posts_path, notice: "Post was updated!"
+		else
+			flash[:alert] = "There as an error modifying your post"
+			render :edit
+		end
+	end
 end
 
